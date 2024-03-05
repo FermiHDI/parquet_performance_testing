@@ -21,17 +21,17 @@ ALL RIGHTS RESERVED </br>
 | Dataframe: (7812500, 16)                                           |                  |            953.674 |               |
 |                                                                    |                  |                    |               |
 | Write Tests                                                        |                  |                    |               |
-| Writing Raw Parquet File                                           |         3.45274  |            987.813 |   -3.57972    |
-| Writing Snappy Compressed Parquet File                             |         3.79007  |            987.863 |   -0.00500021 |
-| Writing GZip Compressed Parquet File                               |        25.0899   |            985.98  |    0.185605   |
-| Writing Brotli Compressed Parquet File                             |         9.71139  |            983.587 |    0.427864   |
-| Writing lz4 Compressed Parquet File                                |         3.93752  |            991.689 |   -0.392315   |
-| Writing zStd Compressed Parquet File                               |         4.42556  |            986.864 |    0.0960559  |
-| Writing CSV File                                                   |        63.1686   |           2428.36  | -154.632      |
-| Writing zip Compressed CSV File                                    |       198.334    |           1166.94  |  -22.3627     |
-| Writing gzip Compressed CSV File                                   |       203.886    |           1166.94  |  -22.3626     |
-| Writing bz2 Compressed CSV File                                    |       223.469    |           1075.57  |  -12.7822     |
-| Writing tar Compressed CSV File                                    |        50.9034   |           2428.37  | -154.633      |
+| Writing Raw Parquet File                                           |          3.45274 |            987.813 |      -3.57972 |
+| Writing Snappy Compressed Parquet File                             |          3.79007 |            987.863 |   -0.00500021 |
+| Writing GZip Compressed Parquet File                               |          25.0899 |             985.98 |      0.185605 |
+| Writing Brotli Compressed Parquet File                             |          9.71139 |            983.587 |      0.427864 |
+| Writing lz4 Compressed Parquet File                                |          3.93752 |            991.689 |     -0.392315 |
+| Writing zStd Compressed Parquet File                               |          4.42556 |            986.864 |     0.0960559 |
+| Writing CSV File                                                   |          63.1686 |            2428.36 |      -154.632 |
+| Writing zip Compressed CSV File                                    |          198.334 |            1166.94 |       51.9453 |
+| Writing gzip Compressed CSV File                                   |          203.886 |            1166.94 |       51.9453 |
+| Writing bz2 Compressed CSV File                                    |          223.469 |            1075.57 |       55.7079 |
+| Writing tar Compressed CSV File                                    |          50.9034 |            2428.37 |      -0.00041 |
 |                                                                    |                  |                    |               |
 | Read Tests                                                         |                  |                    |               |
 | Reading Raw Parquet File                                           |         0.958191 |                    |               |
@@ -40,11 +40,11 @@ ALL RIGHTS RESERVED </br>
 | Reading Brotli Compressed Parquet File                             |         0.988539 |                    |               |
 | Reading lz4 Compressed Parquet File                                |         0.961599 |                    |               |
 | Reading zStd Compressed Parquet File                               |         0.906938 |                    |               |
-| Reading Uncompressed CSV File                                      |         2.48883  |                    |               |
-| Reading zip Compressed CSV File                                    |         7.97299  |                    |               |
-| Reading gzip Compressed CSV File                                   |        33.1109   |                    |               |
-| Reading bz2 Compressed CSV File                                    |       107.859    |                    |               |
-| Reading tar Compressed CSV File                                    |         2.68874  |                    |               |
+| Reading Uncompressed CSV File                                      |          2.48883 |                    |               |
+| Reading zip Compressed CSV File                                    |          7.97299 |                    |               |
+| Reading gzip Compressed CSV File                                   |          33.1109 |                    |               |
+| Reading bz2 Compressed CSV File                                    |          107.859 |                    |               |
+| Reading tar Compressed CSV File                                    |          2.68874 |                    |               |
 |                                                                    |                  |                    |               |
 | Dataframe Mutation Tests                                           |                  |                    |               |
 | Copying A DataFrame                                                |         0.220021 |                    |               |
