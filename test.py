@@ -27,7 +27,7 @@ print("maxNumber ", type(maxNumber), " ", maxNumber)
 print("\n")
 print("Generating Random data \"np.random.randint(0, (2^intSize), size=(rows,columns))\" ...")
 print (rows*columns*(intSize//8)/(1024**2), " Megabytes of data in ", rows, " Rows & ", columns, " Columns of ", intSize, " bit Integers")
-Table.append(["Generated Data", None, rows*columns*(intSize//8)/(1024**2), None])
+Table.append(["Generated "+str(rows*columns)+" "+str(intSize)+ " Bit Integers In "+str(rows)+" Rows And "+str(columns)+" Columns", None, rows*columns*(intSize//8)/(1024**2), None])
 
 start = datetime.now()
 np_array = np.random.randint(0, maxNumber, size=(rows,columns))
@@ -38,10 +38,13 @@ print("Process took", end, " sec")
 print("The Dataframe is using ", df.memory_usage(deep=True).sum()/1024**2, " MB of memory")
 print("Dataframe shape: ", df.shape)
 print("The Dataframe Types are: ", df.dtypes)
-print("First 10 Rows of the Dataframe are: ")
+print("First 10 Rows of the Dataframe Are: ")
 print(df.head(10))
 print("\n")
-Table.append(["Raw Data", None, df.memory_usage(deep=True).sum()/1024**2, None])
+Table.append(["Dataframe: " + str(df.shape), None, df.memory_usage(deep=True).sum()/1024**2, None])
+
+Table.append([None, None, None, None])
+Table.append(["Write Tests", None, None, None])
 
 print("Writing Raw Parquet File From Dataframe...")
 start = datetime.now()
@@ -98,6 +101,8 @@ print("File Size is :", zstd_file_size/1024**2, " MB\n")
 Table.append(["Writing zStd Compressed Parquet File", zstd_end, zstd_file_size/1024**2, 100-((zstd_file_size/raw_file_size)*100)])
 
 print("\n\nRead Tests\n\n")
+Table.append([None, None, None, None])
+Table.append(["Read Tests", None, None, None])
 
 print("Reading raw Parquet File Into A Dataframe...")
 del df
@@ -148,6 +153,8 @@ print("Process took", zstd_read_end, " sec\n")
 Table.append(["Reading zStd Compressed Parquet File", zstd_read_end, None, None])
 
 print("\n\nProcessing Tests\n\n")
+Table.append([None, None, None, None])
+Table.append(["Dataframe Mutation Tests", None, None, None])
 
 print("Testing Copying A DataFrame")
 start = datetime.now()
@@ -220,11 +227,11 @@ df.drop(indexs, inplace=True)
 con_rr_end = (datetime.now() - start).total_seconds()
 print("The Dataframe's Exit Shape is: ", df.shape)
 print("Process took", con_rr_end, " sec\n")
-Table.append(["Removing A DataFrame Row Based On Condition", con_rr_end, None, None])
+Table.append(["Removing DataFrame Rows Based On Condition", con_rr_end, None, None])
 
 del df
 print("\nDone")
 print("Results:")
-print(tabulate(Table, headers=[" ", "Time (Seconds)", "Size (Megabytes)", "Ratio (%)"], tablefmt="fancy_grid"))
+print(tabulate(Table, headers=[" ", "Time (Seconds)", "Size (Megabytes)", "Ratio (%)"], tablefmt="github"))
 
 exit(0)
