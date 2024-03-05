@@ -48,11 +48,17 @@ ALL RIGHTS RESERVED </br>
 ```
 
 ## Commands
+```
 usage: test.py [-h] [--intSize INTSIZE] [--rows ROWS] [--columns COLUMNS]
--h, --help         show this help message and exit
---intSize INTSIZE  Size of the integer
---rows ROWS        Number of rows
---columns COLUMNS  Number of columns
+-h, --help              show this help message and exit
+--intSize INTSIZE       Size of the integer
+--rows ROWS             Number of rows
+--columns COLUMNS       Number of columns
+--dataset DATASET       Location of a custom parquet file to use
+--intColumn1 INTCOLUMN1 Column of custom dataset that is an int type
+--intColumn2 INTCOLUMN2 Column of custom dataset that is an int type
+--intColumn3 INTCOLUMN3 Column of custom dataset that is an int type
+```
 
 ## To Run:
 ```
